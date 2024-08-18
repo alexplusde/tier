@@ -43,6 +43,7 @@ if (rex_addon::get('yform')->isAvailable() && !rex::isSafeMode()) {
 /* URL-Profile installieren */
 if (rex_addon::get('url') && rex_addon::get('url')->isAvailable()) {
     if (false === rex_config::get('tier', 'url_profile', false)) {
+        
         $rex_tier_category = array_filter(rex_sql::factory()->getArray("SELECT * FROM rex_url_generator_profile WHERE `table_name` = '1_xxx_rex_tier_category'"));
         if (!$rex_tier_category) {
             $query = str_replace('999999', rex_article::getSiteStartArticleId(), rex_file::get(__DIR__ . '/install/rex_url_profile_tier_category.sql'));
