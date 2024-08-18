@@ -10,7 +10,7 @@ requires:
     redaxo: ^5.17
     packages:
         yform: "^4"
-        yform_field: ">=3"
+        yform_field: ">=2.5.0"
 
 page:
     title: translate:tier_title
