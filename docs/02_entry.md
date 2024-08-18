@@ -21,7 +21,18 @@ Gibt alle Tiere zurück, die den Status "online" oder "vermittelt" haben.
 $tier_entries_collection = Entry::findOnline();
 ```
 
-### `getCategoryId()`
+### `getUrl()`
+
+Gibt die URL zur Detail-Ansicht eines Tiers zurück.
+
+Beispiel:
+
+```php
+$dataset = tier_entry::get($id);
+$url = $dataset->getUrl();
+```
+
+### `getCategory()`
 
 Gibt den Wert für das Feld `category_id` (Kategorie) zurück:
 
@@ -29,17 +40,7 @@ Beispiel:
 
 ```php
 $dataset = tier_entry::get($id);
-$beziehung = $dataset->getCategoryId();
-```
-
-### `setCategoryId(mixed $value)`
-
-Setzt den Wert für das Feld `category_id` (Kategorie).
-
-```php
-$dataset = tier_entry::create();
-$dataset->setCategoryId($value);
-$dataset->save();
+$beziehung = $dataset->getCategory();
 ```
 
 ### `getName()`
@@ -191,11 +192,7 @@ $dataset->save();
 
 ### `getCreateuser()`
 
-Gibt folgenden Wert
-
-    zurück
-
-: Erstellt von
+Gibt folgenden Wert zurück: Erstellt von
 
 Beispiel:
 
@@ -237,11 +234,7 @@ $dataset->save();
 
 ### `getUpdateuser()`
 
-Gibt folgenden Wert
-
-    zurück
-
-: Zuletzt bearbeitet von
+Gibt folgenden Wert zurück: Zuletzt bearbeitet von
 
 Beispiel:
 

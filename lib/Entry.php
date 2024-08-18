@@ -39,7 +39,7 @@ class Entry extends rex_yform_manager_dataset
     
     /* Kategorie */
     /** @api */
-    public function getCategoryId() : ?rex_yform_manager_dataset {
+    public function getCategory() : ?rex_yform_manager_dataset {
         return $this->getRelatedDataset("category_id");
     }
 

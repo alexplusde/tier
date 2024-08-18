@@ -21,6 +21,17 @@ Gibt alle Kategorien zurück, die den Status "online" haben.
 $tier_category_collection = Category::findOnline();
 ```
 
+### `getUrl()`
+
+Gibt die URL zur Kategorie zurück.
+
+Beispiel:
+
+```php
+$dataset = tier_category::get($id);
+$url = $dataset->getUrl();
+```
+
 ### `getName()`
 
 Gibt den Wert für das Feld `name` (Name) zurück:
@@ -107,11 +118,7 @@ $dataset->save();
 
 ### `getcreateUser()`
 
-Gibt folgenden Wert
-
-    zurück
-
-: Erstellt von
+Gibt folgenden Wert zurück: Erstellt von
 
 Beispiel:
 
@@ -153,11 +160,7 @@ $dataset->save();
 
 ### `getupdateUser()`
 
-Gibt folgenden Wert
-
-    zurück
-
-: Zuletzt bearbeitet von
+Gibt folgenden Wert zurück: Zuletzt bearbeitet von
 
 Beispiel:
 
