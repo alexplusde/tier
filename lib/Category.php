@@ -2,6 +2,7 @@
 
 namespace Alexplusde\Tier;
 
+use rex_yform_manager_collection;
 use rex_yform_manager_dataset;
 use rex_user;
 
@@ -16,6 +17,19 @@ class Category extends rex_yform_manager_dataset
     public static function getStatusOptions(): array
     {
         return self::STATUS;
+    }
+
+    
+    public static function findOnline(): rex_yform_manager_collection
+    {
+        $query = self::query();
+        $query->where('status', 1, '>=');
+        return $query->find();
+    }
+
+    public function getUrl(): ?string
+    {
+        return rex_getUrl('', '', ['tier-category-id' => $this->getId()]);
     }
     
     /* Name */

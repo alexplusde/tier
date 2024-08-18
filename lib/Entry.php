@@ -4,6 +4,7 @@ namespace Alexplusde\Tier;
 
 use rex_media;
 use rex_user;
+use rex_yform_manager_collection;
 use rex_yform_manager_dataset;
 
 class Entry extends rex_yform_manager_dataset
@@ -21,6 +22,20 @@ class Entry extends rex_yform_manager_dataset
         return self::STATUS;
     }
 
+    public static function findOnline($category_id = null): rex_yform_manager_collection
+    {
+        $query = self::query();
+        $query->where('status', 1, '>=');
+        if ($category_id) {
+            $query->where('category_id', $category_id);
+        }
+        return $query->find();
+    }
+
+    public function getUrl(): ?string
+    {
+        return rex_getUrl('', '', ['tier-entry-id' => $this->getId()]);
+    }
     
     /* Kategorie */
     /** @api */
@@ -114,11 +129,11 @@ class Entry extends rex_yform_manager_dataset
             
     /* URL */
     /** @api */
-    public function getUrl() : ?string {
+    public function getExternalUrl() : ?string {
         return $this->getValue("url");
     }
     /** @api */
-    public function setUrl(mixed $value) : self {
+    public function setExternalUrl(mixed $value) : self {
         $this->setValue("url", $value);
         return $this;
     }
