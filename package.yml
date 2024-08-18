@@ -33,6 +33,11 @@ page:
             icon: rex-icon fa-cogs
             itemClass: pull-right
             perm: admin
+        docs:
+            title: translate:tier_docs
+            icon: rex-icon fa-info-circle
+            itemClass: pull-right
+            perm: tier[docs]
 
 default_config:
     editor: 'class="form-control redactor-editor--default"'

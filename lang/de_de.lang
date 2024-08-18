@@ -9,6 +9,11 @@ tier_table_category = 🐶 Kategorien
 tier_settings = Einstellungen
 tier_docs = Hilfe
 
+tier_docs_intro = Intro
+tier_docs_entry = Entry-Klasse
+tier_docs_category = Category-Klasse
+tier_docs_settings = Einstellungen
+
 # Konfigurationsformulare
 
 tier_config = Einstellungen
