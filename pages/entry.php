@@ -1,11 +1,11 @@
 <?php
 
-echo rex_view::title(rex_i18n::msg('blaupause_title'));
+echo rex_view::title(rex_i18n::msg('tier_title'));
 
 $yform = $this->getProperty('yform', []);
 $yform = $yform[rex_be_controller::getCurrentPage()] ?? [];
 
-$table_name = 'rex_blaupause';
+$table_name = 'rex_tier_entry';
 
 rex_extension::register(
     'YFORM_MANAGER_DATA_PAGE_HEADER',

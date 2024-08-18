@@ -1,21 +1,64 @@
-blaupause_title = Blaupause # Titel des Addons
+tier_title = Tiervermittlung
 
 # Menüpunkte
 
-blaupause_table = Blaupause
-blaupause_settings = Einstellungen
-blaupause_docs = Hilfe
-
-# Tipp: FriendsOfREDAXO-Addons können bei YTraduco zur Übersetzung eingereicht werden.
-# Fertige Übersetzungen mit Copilot oder Profi-Übersetzungstools an.
+tier_entry = Vermittlung
+tier_category = Kategorien
+tier_table_entry = 🦊 Vermittlung
+tier_table_category = 🐶 Kategorien
+tier_settings = Einstellungen
+tier_docs = Hilfe
 
 # Konfigurationsformulare
 
-blaupause_config = Einstellungen
-blaupause_config_mytextfield_label = Test-Feld
-blaupause_config_mytextfield_notice = Notiz, die etwas erklärt und bspw. einen Standardwert nennt. Hier: <code>Test</code>
+tier_config = Einstellungen
+tier_config_editor_label = Editor
+tier_config_editor_notice = z.B. <code>class="form-control redactor-editor--default"</code>
 
-# YForm Tabellen-Übersetzung
+# YForm gemeinsame Felder
 
-blaupause_table_name_label = Name
-blaupause_table_name_notice = Notiz, die etwas erklärt und auch einen Beispielwert nennen kann, z.B.: <code>Mein Name</code> 
+tier_createdate = Erstellt am
+tier_updatedate = Zuletzt bearbeitet am
+tier_createuser = Erstellt von
+tier_updateuser = Zuletzt bearbeitet von
+
+# YForm Tabelle rex_tier_entry
+
+tier_name = Name
+tier_name_notice = Names des Tieres
+
+tier_category_id = Kategorie
+
+tier_status = Status
+tier_status_notice = Veröffentlichungs- und Vermittlungsstatus des Tiers
+tier_status_disabled = 🟥 Offline
+tier_status_draft = 🟨 Entwurf
+tier_status_published = 🟩 Veröffentlicht
+tier_status_adopted = ✅ Vermittelt
+
+tier_entry_images = Galerie
+tier_entry_images_notice = Weitere Bilder
+
+tier_entry_image = Bild
+tier_entry_image_notice = Hauptbild des Tiers
+
+tier_entry_teaser = Teaser
+tier_entry_text = Beschreibung
+tier_entry_url = URL
+tier_entry_url_notice = Link zu weiteren Informationen
+
+tier_entry_validate_name = Bitte geben Sie einen Namen an.
+tier_entry_status_validate = Es wurde kein gültiger Status angegeben.
+tier_entry_url_validate = Bitte geben Sie eine gültige URL an, einschließlich <code>https://</code> am Anfang.
+tier_entry_category_id_validate = Bitte wählen Sie eine gültige Kategorie aus.
+
+# YForm Tabelle rex_tier_category
+
+tier_category_name = Kategorie
+
+tier_category_status = Status
+tier_category_status_disabled = 🟥 Inaktiv
+tier_category_status_published = 🟩 Aktiv
+
+tier_category_teaser = Teaser
+tier_category_teaser_notice = Kurze Beschreibung der Kategorie, für Suchmaschinen und Listenansichten
